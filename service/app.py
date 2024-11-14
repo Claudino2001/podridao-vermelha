@@ -9,7 +9,7 @@ from PIL import Image
 app = Flask(__name__)
 
 # Carrega o modelo e os rótulos
-model = load_model("keras_Model.h5", compile=False)
+model = load_model("keras_model.h5", compile=False)
 class_names = open("labels.txt", "r").readlines()
 
 
