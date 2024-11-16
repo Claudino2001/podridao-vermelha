@@ -4,4 +4,4 @@ Desenvolver um sistema de visão computacional especializado e eficiente para a 
 
 -----------
 
-Tentei executar com as seguintes versões do Python: 3.6, 3.8, 3.10 e 3.12.
+Rodando no Pyton 3.8
