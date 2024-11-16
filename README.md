@@ -4,4 +4,4 @@ Desenvolver um sistema de visão computacional especializado e eficiente para a 
 
 -----------
 
-Rodando no Pyton 3.8
+Rodando no Python 3.8
