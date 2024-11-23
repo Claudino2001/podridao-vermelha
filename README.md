@@ -39,6 +39,26 @@ Este sistema permite o envio de uma imagem para detecção de fungos com base em
      ```
      http://127.0.0.1:5000/
      ```
+### Como Configurar o Servidor Usando Docker
+
+1. **Instalar o Docker no seu Computador**  
+   Baixe e instale o Docker Desktop em sua máquina.  
+   [Download do Docker Desktop para Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-amd64)
+
+2. **Baixe o serviço da rede neural em sua máquina**  
+   Após a instalação do Docker, faça o download da imagem do serviço da rede neural com o comando:  
+   ```bash
+   docker pull claudino2001/service-agave
+   ```
+
+3. **Execute o serviço para deixá-lo online em sua rede local**  
+   Após o download, execute o seguinte comando para rodar o serviço na sua rede local, ouvindo na porta 5000:  
+   ```bash
+   docker run -p 5000:5000 claudino2001/service-agave
+   ```
+   Isso vai deixar o serviço acessível em `http://localhost:5000`.
+
+
 
 ## Como Utilizar a Ferramenta
 
