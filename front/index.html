@@ -4,138 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detecção de Fungo</title>
-    <style>
-        /* Resetando alguns estilos básicos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: #555;
-            margin-top: 30px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        input[type="file"] {
-            font-size: 16px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 15px;
-            width: 100%;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #result {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-size: 16px;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 20px;
-            border: 1px solid #ccc;
-        }
-
-        /* Estilos para responsividade em dispositivos móveis */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            form {
-                width: 100%;
-                padding: 15px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 12px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Upload de Imagem para Detecção de Fungo</h1>
-    <form id="uploadForm">
-        <input type="file" id="imageInput" name="file" accept="image/*" required>
-        <button type="submit">Enviar</button>
-    </form>
-    <h2>Resultado</h2>
-    <pre id="result"></pre>
+    <div class="container">
+        <h1>Upload de Imagem</h1>
+        <form id="uploadForm">
+            <input type="file" id="imageInput" name="file" accept="image/*" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <pre id="result"></pre>
+    </div>
 
-    <script>
-        document.getElementById('uploadForm').onsubmit = async function (event) {
-            event.preventDefault();
-
-            const formData = new FormData();
-            const imageInput = document.getElementById('imageInput');
-            formData.append('file', imageInput.files[0]);
-
-            try {
-                const response = await fetch('http://localhost:5000/detecta-fungo', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                if (response.ok) {
-                    const result = await response.json();
-                    document.getElementById('result').innerText = 
-                        `Classe: ${result.class}\nConfiança: ${result.confidence}`;
-                } else {
-                    document.getElementById('result').innerText = 
-                        'Erro ao processar a imagem. Tente novamente.';
-                }
-            } catch (error) {
-                document.getElementById('result').innerText = 
-                    'Erro de conexão com o servidor. Verifique se o serviço está ativo.';
-            }
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
