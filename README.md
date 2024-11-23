@@ -94,12 +94,14 @@ Este sistema permite o envio de uma imagem para detecção de fungos com base em
   - Certifique-se de que a imagem contém conteúdo relevante para a análise.
 
 ## Personalizações
-Se precisar personalizar ou ajustar o sistema para outro modelo ou funcionalidade, entre em contato conosco.
+Se precisar personalizar, ajustar o sistema para outro modelo, adicionar funcionalidade ou retreinar a rede neural, entre em contato conosco.
 
-Atenciosamente,  
+Atenciosamente,
+
 Equipe de Desenvolvimento.
+
 - [Davi Nogueira Gonçalves](https://github.com/)  
 - [Igor Souza Freitas](https://github.com/IgorSF01)  
 - [Gabriel De Araujo Claudino](https://github.com/Claudino2001)  
 - [José Santos Damasceno](https://github.com/jos756H)  
-
+- [Lucas Amparo Barbosa](https://github.com/lucasamparo)
