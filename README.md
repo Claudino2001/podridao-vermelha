@@ -1,22 +1,23 @@
-# DESENVOLVIMENTO DE UM SISTEMA DE DETECÇÃO DO FUNGO DA PODRIDÃO VERMELHA NA PLANTA AGAVE
+<h1 align="center">
+    <strong>SISTEMA DE DETECÇÃO DO FUNGO DA PODRIDÃO VERMELHA NA PLANTA AGAVE</strong>
+</h1>
+
+## Sobre
 
 Desenvolver um sistema de visão computacional especializado e eficiente para a Área de Design e Produto Industrial (DPI) do Senai CIMATEC para uso em mudas de AGAVE, visando a identificação precoce da podridão vermelha. A proposta deste projeto visa trazer um sistema que utilizará algoritmos para o processamento, análise e certificação de imagens coletadas e entregues à equipe técnica do projeto. 
 
------------
-
-# Instruções de Uso do Sistema de Detecção de Fungos
+## Instruções de Uso do Sistema de Detecção de Fungos
 
 Este sistema permite o envio de uma imagem para detecção de fungos com base em um modelo pré-treinado.
 
-## Como Configurar o Servidor
+### Como Configurar o Servidor
 
 1. **Requisitos do Sistema**
    - Python 3.8 instalado.
    - Dependências necessárias:
      - Flask
-     - Keras
+     - TensorFlow
      - Pillow
-     - NumPy
 
    Execute o seguinte comando para instalar todas as dependências:
    ```bash
@@ -36,16 +37,20 @@ Este sistema permite o envio de uma imagem para detecção de fungos com base em
 3. **Verificar Funcionamento**
    - O servidor estará disponível no endereço:
      ```
-     http://127.0.0.1:5000
+     http://127.0.0.1:5000/
      ```
 
 ## Como Utilizar a Ferramenta
 
 ### Frontend (Página da Web)
-1. Acesse a página de upload pelo navegador (link fornecido pelo cliente).
-2. Clique no botão "Selecionar Arquivo" para enviar uma imagem.
-3. Clique no botão "Enviar".
-4. Aguarde a análise. O resultado será exibido com o nome do fungo detectado e a confiança da predição.
+1. Acesse a página de upload pelo navegador (front/index.html). Dentro da pasta "front", abra o arquivo "index.html" usando o navegador de sua preferência.
+3. Clique no botão "Choose File" ou "Selecionar Arquivo" para enviar uma imagem.
+4. Clique no botão "Enviar".
+5. Aguarde a análise.
+6. O resultado da análise será exibido logo abaixo do botão 'Enviar', indicando se há ou não a presença do fungo e a confiança da predição.
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/75d0247b-4170-4b5b-85eb-8a0115118a64">
+</p>
 
 ### Via Ferramenta de Teste (Postman ou Similar)
 1. Abra a ferramenta de testes.
@@ -72,4 +77,9 @@ Este sistema permite o envio de uma imagem para detecção de fungos com base em
 Se precisar personalizar ou ajustar o sistema para outro modelo ou funcionalidade, entre em contato conosco.
 
 Atenciosamente,  
-Equipe de Desenvolvimento
+Equipe de Desenvolvimento.
+- [Davi Nogueira Gonçalves](https://github.com/)  
+- [Igor Souza Freitas](https://github.com/IgorSF01)  
+- [Gabriel De Araujo Claudino](https://github.com/Claudino2001)  
+- [José Santos Damasceno](https://github.com/jos756H)  
+
