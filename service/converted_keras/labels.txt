@@ -1,2 +1,2 @@
-0 Com Fungo
-1 Sem Fungo
+0 Sem fungo
+1 Com Fungo
